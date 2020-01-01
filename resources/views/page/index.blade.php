@@ -18,7 +18,6 @@
       </div>
       @endforeach
       <hr>
-
       <!-- Pager -->
       <div class="clearfix float-right">
           {{$post->links()}}

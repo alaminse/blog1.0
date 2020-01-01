@@ -49,6 +49,9 @@
           <li class="nav-item">
             <a class="nav-link" href="{{ Route('contact') }}">Contact</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ Route('create') }}">Student</a>
+          </li>
         </ul>
       </div>
     </div>

@@ -36,3 +36,15 @@ Route::get('view/post/{id}','PostController@ViewPost');
 Route::get('edit/post/{id}','PostController@EditPost');
 Route::post('update/post/{id}','PostController@UpdatePost');
 Route::get('delete/post/{id}','PostController@DeletePost');
+
+
+
+
+// Student ==================
+Route::get('create','StudentController@Create')->name('create');
+Route::post('store/student', 'StudentController@Store')->name('store.student');
+Route::get('all/student','StudentController@Index')->name('all.student');
+Route::get('view/student/{id}','StudentController@Show');
+Route::get('delete/student/{id}','StudentController@Delete');
+Route::get('edit/student/{id}','StudentController@Edit');
+Route::post('update/student/{id}', 'StudentController@Update');
