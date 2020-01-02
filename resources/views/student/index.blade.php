@@ -4,7 +4,7 @@
   <div class="row">
     <div class="col-lg-12 mx-auto">
 
-      <a href="{{ Route('create') }}" class="btn btn-danger">Add Student</a>
+      <a href="{{URL::to('student/create')}}" class="btn btn-danger">Add Student</a>
 
       <table class="table table-responsive">
         <tr>
@@ -21,9 +21,13 @@
           <td>{{ $row->phone}}</td>
           <td>{{ $row->email}}</td>
           <td>
-            <a href="{{ URL::to('edit/student/'.$row->id)}}" class="btn btn-info">Edit</a>
-            <a href="{{ URL::to('delete/student/'.$row->id)}}" class="btn btn-danger" id="delete" >Delete</a>
-            <a href="{{ URL::to('view/student/'.$row->id)}}" class="btn btn-success">View</a>
+            <a href="{{ URL::to('student/'.$row->id.'/edit')}}" class="btn btn-info">Edit</a>
+            <form action="{{url('student/'.$row->id)}}" method="post">
+              @csrf
+              @method('DELETE')
+              <button type="submit" class="btn btn-danger">Delete</button>
+            </form>
+            <a href="{{ URL::to('student/'.$row->id)}}" class="btn btn-success">View</a>
           </td>
         </tr>
         @endforeach

@@ -4,10 +4,10 @@
   <div class="row">
     <div class="col-lg-8 col-md-10 mx-auto">
 
-      <a href="{{route('all.student')}}" class="btn btn-info">All Student</a>
+      <a href="{{URL::to('student')}}" class="btn btn-info">All Student</a>
       <br><br>
       <h3>New Student Information</h3>
-      <form action="{{route('store.student')}}" method="post">
+      <form action="{{URL::to('student')}}" method="post">
         <!-- validation in laravel -->
         @if ($errors->any())
             <div class="alert alert-danger">

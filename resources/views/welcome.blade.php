@@ -50,7 +50,7 @@
             <a class="nav-link" href="{{ Route('contact') }}">Contact</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ Route('create') }}">Student</a>
+            <a class="nav-link" href="{{url('student')}}">Student</a>
           </li>
         </ul>
       </div>

@@ -4,13 +4,13 @@
   <div class="row">
     <div class="col-lg-8 col-md-10 mx-auto">
 
-      <a href="{{ Route('all.student') }}" class="btn btn-info">All Student</a>
+      <a href="{{ url('student') }}" class="btn btn-info">All Student</a>
 
       <br>
       <br>
       <h3>Student Update</h3>
 
-      <form action="{{ url('update/student/'.$student->id)}}" method="post">
+      <form action="{{ url('student/'.$student->id)}}" method="post">
         @if ($errors->any())
             <div class="alert alert-danger">
                 <ul>
@@ -21,6 +21,7 @@
             </div>
         @endif
         @csrf
+        @method('PUT')
         <div class="control-group">
           <div class="form-group floating-label-form-group controls">
             <label>Student Name</label>
